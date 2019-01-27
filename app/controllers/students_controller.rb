@@ -7,8 +7,21 @@ class StudentsController < ApplicationController
   end
 
   def create
+    @student = Student.new(post_params(:first_name, :last_name))
+    @student.save
+    redirect_to student_path(@student)
+  end
+   
+  def update
+    @student = Student.find(params[:id])
+    @student.update(post_params(:first_name, :last_name))
+    redirect_to student_path(@srtudent)
+  end
+   
+  private
+   
+  def post_params(*args)
+    params.require(:student).permit(*args)
   end
 
-  def update
-  end
 end

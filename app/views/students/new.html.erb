@@ -1,10 +1,10 @@
 <h1>Student Form</h1>
 <%= form_tag("/students") do %>
-  <%= label_tag('students[first_name]', "first_name") %>
-  <%= text_field_tag('students[first_name]') %>
+  <%= label_tag('student[first_name]', "first_name") %>
+  <%= text_field_tag('student[first_name]') %>
 
-  <%= label_tag('students[last_name]', "last_name") %>
-  <%= text_field_tag('students[last_name]') %>
+  <%= label_tag('student[last_name]', "last_name") %>
+  <%= text_field_tag('student[last_name]') %>
 
   <%= submit_tag "Create Student" %>
 <% end %>

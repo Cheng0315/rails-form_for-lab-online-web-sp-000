@@ -1,7 +1,7 @@
 class SchoolClassesController < ApplicationController
 
   def new
-    @school_classes
+    @school_classes = 'school_classes'
   end
 
   def show

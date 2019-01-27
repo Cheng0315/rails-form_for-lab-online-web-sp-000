@@ -1,8 +1,10 @@
 <h1>Student Form</h1>
-<%= form_for('/students') do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <%= f.label :last_name %>
-  <%= f.text_field :lasst_name %>
-  <%= f.submit %>
+<%= form_tag("/students") do %>
+  <%= label_tag('students[first_name]', "first_name") %>
+  <%= text_field_tag('students[first_name]') %>
+
+  <%= label_tag('students[last_name]', "last_name") %>
+  <%= text_field_tag('students[last_name]') %>
+
+  <%= submit_tag "Create Student" %>
 <% end %>

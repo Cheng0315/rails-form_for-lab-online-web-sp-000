@@ -7,6 +7,10 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
+  def edit 
+    @student = Student.find(params[:id])
+  end
+
   def create
     @student = Student.new(post_params(:first_name, :last_name))
     @student.save

@@ -1,8 +1,10 @@
 <h1>School Class Form</h1>
-<%= form_for(@school_classes) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :room_number %>
-  <%= f.text_field :room_number %>
-  <%= f.submit %>
+<%= form_tag("/school_classes") do %>
+  <%= label_tag('school_class[title]', "title") %>
+  <%= text_field_tag('school_class[title]') %>
+
+  <%= label_tag('school_class[room_number]', "room_number") %>
+  <%= text_field_tag('school_class[room_number]') %>
+
+  <%= submit_tag "Create School Csass" %>
 <% end %>
